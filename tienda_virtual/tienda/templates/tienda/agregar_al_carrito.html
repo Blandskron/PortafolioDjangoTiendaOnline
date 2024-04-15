@@ -1,0 +1,15 @@
+<!-- templates/tienda/agregar_al_carrito.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto Agregado al Carrito</title>
+</head>
+<body>
+    <h1>Producto Agregado al Carrito</h1>
+    <p>Has agregado {{ producto.nombre }} al carrito.</p>
+    <a href="{% url 'lista_productos' %}">Volver a la lista de productos</a>
+    <a href="{% url 'ver_carrito' %}">Ver Carrito</a>
+</body>
+</html>

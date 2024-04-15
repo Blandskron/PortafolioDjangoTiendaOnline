@@ -1,0 +1,16 @@
+<!-- templates/tienda/detalle_producto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto</title>
+</head>
+<body>
+    <h1>{{ producto.nombre }}</h1>
+    <p>Descripción: {{ producto.descripcion }}</p>
+    <p>Precio: ${{ producto.precio }}</p>
+    <a href="{% url 'agregar_al_carrito' producto.id %}">Agregar al carrito</a>
+    <a href="{% url 'ver_carrito' %}">Ver Carrito</a>
+</body>
+</html>

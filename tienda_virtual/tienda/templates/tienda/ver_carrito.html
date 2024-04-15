@@ -1,0 +1,22 @@
+<!-- templates/tienda/ver_carrito.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <ul>
+        {% for item in carrito.items.all %}
+            <li>{{ item.producto.nombre }} - Cantidad: {{ item.cantidad }}</li>
+        {% empty %}
+            <li>No hay productos en el carrito</li>
+        {% endfor %}
+    </ul>
+    <p>Total de Productos: {{ carrito.total_items }}</p>
+    <p>Total a Pagar: ${{ carrito.total }}</p>
+    <a href="{% url 'lista_productos' %}">Ver listaproductos</a>
+</body>
+</html>
