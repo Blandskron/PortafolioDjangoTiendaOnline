@@ -21,7 +21,6 @@ def agregar_al_carrito(request, producto_id):
         carrito_item.cantidad += 1
         carrito_item.save()
     
-    carrito.total += producto.precio
     carrito.save()
     
     return render(request, 'tienda/agregar_al_carrito.html', {'producto': producto})

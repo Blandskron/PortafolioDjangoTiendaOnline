@@ -16,7 +16,7 @@
         {% endfor %}
     </ul>
     <p>Total de Productos: {{ carrito.total_items }}</p>
-    <p>Total a Pagar: ${{ carrito.total }}</p>
+    <p>Total a Pagar: ${{ carrito.total_carrito }}</p>
     <a href="{% url 'lista_productos' %}">Ver listaproductos</a>
 </body>
 </html>
